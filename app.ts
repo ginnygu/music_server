@@ -1,7 +1,7 @@
 import express from 'express';
 import 'dotenv/config';
 import logger from 'morgan';
-import userRouter from './routes/users/userRouters';
+import accountRouter from './routes/accounts/accountRouters';
 
 const port = process.env.PORT || 3000
 
@@ -13,7 +13,7 @@ app.use(express.urlencoded({
     extended: false
 }));
 
-app.use('/user', userRouter)
+app.use('/account', accountRouter)
 
 
 app.listen(port, ()=>{
