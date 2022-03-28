@@ -3,7 +3,7 @@ import {
 	createAccount,
 	getAccounts,
 	getAccount,
-} from "./controller/accountController";
+} from "./controller/accountControllers";
 
 const router = express.Router();
 

@@ -26,7 +26,7 @@ const createAccount = async (req: Request, res: Response) => {
 
 const getAccounts = async (req: Request, res: Response) => {
 	try {
-		const getAccounts = await pool.query("SELECT * FROM account");
+		const getAccounts = await pool.query("SELECT email FROM account");
 		const results = getAccounts.rows;
 		res.status(200).json({
 			results,
